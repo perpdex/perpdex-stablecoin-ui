@@ -28,7 +28,7 @@ export function useIsBlockedRegion() {
                         setIsBlockedRegion(isBlocked)
                     })
             } catch (err) {
-                logger.error(err)
+                logger.error(new Error())
             }
         }
     }, [isDebugMode, setIsBlockedRegion])
