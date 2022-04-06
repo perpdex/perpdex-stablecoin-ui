@@ -3,14 +3,21 @@ import { Route, Switch } from "react-router-dom"
 import Header from "./component/Header"
 import Home from "./page/Home"
 import "focus-visible/dist/focus-visible"
-import { Container, Divider } from "@chakra-ui/react"
+import { Divider } from "@chakra-ui/react"
 import ClosePositionModal from "component/ClosePositionModal"
 import AdjustMarginModal from "component/AdjustMarginModal"
 import BlockedRegionModal from "component/BlockedRegionModal"
 import UserAgreementModal from "component/UserAgreementModal"
+import styled from "styled-components"
+
+const Container = styled.div`
+    background-color: black;
+    text-align: justify;
+    text-justify: inter-ideograph;
+`
 
 export const App = () => (
-    <Container maxW="container.md" pb={20} px={6}>
+    <Container>
         <Header />
         <Divider />
         <Switch>
