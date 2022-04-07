@@ -80,7 +80,7 @@ jobs:
                   REACT_APP_XDAI_RPC_URL: ${{ steps.set-variables.outputs.xdai_rpc_url }}
                   REACT_APP_SEGMENT_API_KEY: ${{ steps.set-variables.outputs.segment_api_key }}
                   REACT_APP_BUGSNAG_API_KEY: ${{ steps.set-variables.outputs.bugsnag_api_key }}
-                  REACT_APP_BLOCKED_REGION: "US,TW"
+                  REACT_APP_BLOCKED_REGION: "US,TW,JP"
 
             - name: Upload website to S3
               uses: jakejarvis/s3-sync-action@master

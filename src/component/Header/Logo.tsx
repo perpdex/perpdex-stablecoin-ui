@@ -1,28 +1,28 @@
 import { Flex, Heading, Spacer } from "@chakra-ui/react"
 
 import ConnectBtn from "./ConnectBtn"
-import Logo from "./Logo"
 import { Link } from "react-router-dom"
 import React from "react"
 import styled from "styled-components"
-import SwitchMenuBtn from "./SwitchMenuBtn"
+import Tvl from "./Tvl"
 
 const Container = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 64px;
-    margin: auto;
+    margin-left: 20px;
 `
 
-function Header() {
+function Logo() {
     return (
         <Container>
-            <Logo />
-            <SwitchMenuBtn />
-            <ConnectBtn />
+            <Link to="/">
+                <Heading size="md" color={"#FFFFFF"}>
+                    PERP USD
+                </Heading>
+            </Link>
+            <Tvl />
         </Container>
     )
 }
 
-export default Header
+export default Logo

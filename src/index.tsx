@@ -22,12 +22,17 @@ import { Web3Provider } from "./container/web3"
 import reportWebVitals from "./reportWebVitals"
 import { setupSegment } from "./lib/segment"
 import theme from "./theme"
+import styled from "styled-components"
 
 declare global {
     interface Window {
         ethereum: any
     }
 }
+
+const Container = styled.div`
+    background: "#000000";
+`
 
 // NOTE: third party services
 setupSegment()
@@ -57,14 +62,16 @@ const Providers = ((...providers: any[]) => ({ children }: { children: React.Rea
 )
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ErrorBoundary>
-            <Providers>
-                <Fonts />
-                <App />
-            </Providers>
-        </ErrorBoundary>
-    </React.StrictMode>,
+    <Container>
+        <React.StrictMode>
+            <ErrorBoundary>
+                <Providers>
+                    <Fonts />
+                    <App />
+                </Providers>
+            </ErrorBoundary>
+        </React.StrictMode>
+    </Container>,
     document.getElementById("root"),
 )
 

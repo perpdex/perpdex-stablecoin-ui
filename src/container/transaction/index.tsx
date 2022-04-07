@@ -101,7 +101,7 @@ function useTransaction() {
                 }
             } catch (err) {
                 resetTxStatus()
-                logger.error(err)
+                logger.error(err as Error)
             }
         }
         if (!isInitialized) {
@@ -167,7 +167,7 @@ function useTransaction() {
                         description: successDesc,
                     })
                 }
-            } catch (err) {
+            } catch (err: any) {
                 if (err.code && err.code === 4001) {
                     // it means user reject this tx
                     isRejected = true
@@ -184,7 +184,7 @@ function useTransaction() {
                     })
                     setError(err)
                 }
-                logger.error(err)
+                logger.error(err as Error)
                 resetTxStatus()
             }
             return {
@@ -219,7 +219,7 @@ function useTransaction() {
                     description: successDesc,
                 })
             } catch (err) {
-                logger.error(err)
+                logger.error(err as Error)
                 setError(err)
                 notifyError({
                     title: <ExternalLink href={getEtherscanTxLink(txHash)}>{errorTitle}</ExternalLink>,
@@ -246,7 +246,7 @@ function useTransaction() {
                     option,
                 )
             } catch (err) {
-                logger.error(err)
+                logger.error(err as Error)
                 setError(err)
             }
             return receipt
