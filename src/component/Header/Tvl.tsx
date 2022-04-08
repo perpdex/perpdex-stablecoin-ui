@@ -3,20 +3,22 @@ import styled from "styled-components"
 
 const Container = styled.div`
     align-items: left;
+    height: 24px;
     margin: auto;
     margin-left: 20px;
     border: solid;
-    border-width: thin;
-    border-color: #555555;
+    border-color: #242424;
     display: flex;
-    font-size: 15px;
+    font-size: 14px;
     color: #ffffff;
+    padding-left: 12px;
 `
 
 const Text = styled.p`
   color: '#ffffff'
-  margin: 10px;
-  padding: 5px;
+  padding-right: 5px;
+  margin: 2px auto;
+  margin-right: 12px;
 `
 
 function Tvl() {

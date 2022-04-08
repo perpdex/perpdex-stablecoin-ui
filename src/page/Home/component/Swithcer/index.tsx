@@ -9,9 +9,9 @@ import SideSwitcher from "./SideSwitcher"
 import Slippage from "./Slippage"
 import Summary from "./Summary"
 
-function Trade() {
+function Switcher() {
     return (
-        <SimpleGrid columns={[1, null, 2]} spacing={16}>
+        <SimpleGrid columns={[1, null]} spacing={16}>
             <VStack spacing={6} p={0}>
                 <SideSwitcher />
                 <MarketSelector />
@@ -20,11 +20,8 @@ function Trade() {
                 <Leverage />
                 <Slippage />
             </VStack>
-            <VStack p={0} spacing={6}>
-                <Summary />
-            </VStack>
         </SimpleGrid>
     )
 }
 
-export default Trade
+export default Switcher
