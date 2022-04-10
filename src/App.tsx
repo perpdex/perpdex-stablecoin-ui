@@ -1,6 +1,7 @@
 import WalletListModal from "component/WalletModal"
 import { Route, Switch } from "react-router-dom"
 import Header from "./component/Header"
+import Footer from "./component/Footer"
 import Home from "./page/Home"
 import "focus-visible/dist/focus-visible"
 import { Divider } from "@chakra-ui/react"
@@ -31,5 +32,6 @@ export const App = () => (
         <UserAgreementModal />
         {/* NOTE: BlockedRegionModal should be in the last one */}
         <BlockedRegionModal />
+        <Footer />
     </Container>
 )
